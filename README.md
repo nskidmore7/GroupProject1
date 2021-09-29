@@ -18,7 +18,7 @@
 * Google Fonts
 
 ## Link of Deployed Application
-
+https://nskidmore7.github.io/GroupProject1/
 
 
 ## Screenshots of Deployed Application
