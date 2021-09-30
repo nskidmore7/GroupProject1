@@ -14,7 +14,7 @@
 * jQuery
 * jQueryUI
 * Moment.js
-* CSS framework (--)
+* Materialize
 * Google Fonts
 
 ## Link of Deployed Application
