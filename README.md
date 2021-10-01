@@ -1,6 +1,6 @@
 # GroupProject1
 
-* Project.
+* Project
 
 # Description
 
@@ -13,7 +13,6 @@
 * JavaScript
 * jQuery
 * jQueryUI
-* Moment.js
 * Materialize
 * Google Fonts
 
