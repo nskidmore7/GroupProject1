@@ -51,19 +51,27 @@
             3-columns-wide on large screens,
             4-columns-wide on medium screens,
             12-columns-wide on small screens  -->
-          <form>
+          <form id="search-form">
             <div class="input-field">
-              <input id="search" type="search" required />
+              <input id="search-name" type="search" required />
               <label class="label-icon" for="search"
                 ><i>Restaurant Name</i></label
               >
               <!-- <i class="material-icons">close</i> -->
             </div>
             <div class="input-field">
-              <input id="search" type="search" required />
+              <input id="search-loc" type="search" required />
               <label class="label-icon" for="search"><i>City</i></label>
               <!-- <i class="material-icons">close</i> -->
             </div>
+            <button
+              class="btn waves-effect waves-light"
+              type="submit"
+              name="action"
+            >
+              Submit
+              <i class="material-icons right">send</i>
+            </button>
           </form>
           <ul class="collection">
             <li class="collection-item avatar">
@@ -163,5 +171,6 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="Assets/list.js"></script>
   </body>
 </html>
