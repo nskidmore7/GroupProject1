@@ -1,12 +1,16 @@
-var searchFormEl = document.querySelector("#search-form");
+var searchFormEl = document.querySelector("#submit");
 // var searchRes = document.querySelector("#search-name");
-var searchLoc = document.querySelector("#search-loc");
+// var searchLoc = document.querySelector("#search-loc");
 console.log("hello");
-function searchApi(query) {
-  console.log(query);
+function searchApi(name, place) {
+  console.log(name);
+  console.log(place);
   var locQueryUrl =
     "https://cors-anywhere.herokuapp.com/" +
-    "https://api.yelp.com/v3/businesses/search?term=starbucks&location=Houston";
+    "https://api.yelp.com/v3/businesses/search?term=" +
+    name +
+    "&location=" +
+    place;
   fetch(locQueryUrl, {
     method: "GET",
     headers: {
@@ -27,14 +31,15 @@ function handleSearchFormSubmit(event) {
   event.preventDefault();
 
   var searchRes = document.querySelector("#search-name").value;
-  console.log(searchRes);
+  var searchLoc = document.querySelector("#search-loc").value;
+  console.log(searchRes, searchLoc);
 
   if (!searchRes) {
     console.error("You need a search input value!");
     return;
   }
 
-  searchApi(searchRes);
+  searchApi(searchRes, searchLoc);
 }
-searchApi("starbucks");
+// searchApi("starbucks");
 searchFormEl.addEventListener("click", handleSearchFormSubmit);
