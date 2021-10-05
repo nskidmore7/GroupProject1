@@ -1,6 +1,8 @@
 var searchFormEl = document.querySelector("#submit");
 // var searchRes = document.querySelector("#search-name");
 // var searchLoc = document.querySelector("#search-loc");
+var searchResultsEl = document.querySelector("#searchResults");
+// var nameEl = document.createElement("li");
 console.log("hello");
 function searchApi(name, place) {
   console.log(name);
@@ -44,7 +46,15 @@ function handleSearchFormSubmit(event) {
 }
 function generateResults(data) {
   let i = 0;
-  while (i < 5) {}
+  while (i < 5) {
+    var name = data.businesses[i].name;
+    console.log(name);
+    var nameEl = document.createElement("li");
+    nameEl.innerText = name;
+    console.log(nameEl);
+    searchResultsEl.appendChild(nameEl);
+    i++;
+  }
 }
 
 // searchApi("starbucks");
