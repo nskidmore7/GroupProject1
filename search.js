@@ -44,9 +44,6 @@ function handleSearchFormSubmit(event) {
 searchFormEl.addEventListener("click", handleSearchFormSubmit);
 
 
-// function getRandomRest(max) ==> max is number of restaurant
-//return Math.floor(Math.random() * max)
-
 
 function getRandomRest(data) {
     console.log(data);
