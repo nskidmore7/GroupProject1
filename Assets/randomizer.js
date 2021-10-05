@@ -1,4 +1,4 @@
-var nameEl = document.createElement(h2)
+var nameEl = document.createElement("h2")
 var searchFormEl = document.querySelector("#submit");
 // var searchRes = document.querySelector("#search-name");
 // var searchLoc = document.querySelector("#search-loc");
@@ -56,6 +56,6 @@ function getRandomRest(data) {
   }
 
 
-  var name = data.businesses[i].name
+  var name = data.businesses[i].name;
   nameEl.innertext = name;
   h2.append(nameEl)
