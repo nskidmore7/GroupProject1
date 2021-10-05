@@ -53,9 +53,10 @@ function getRandomRest(data) {
     console.log(maxL);
     let i = Math.floor(Math.random() * maxL);
     console.log(i);
-  }
+  
 
 
   var name = data.businesses[i].name;
   nameEl.innertext = name;
   h2.append(nameEl)
+}
