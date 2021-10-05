@@ -1,8 +1,6 @@
 var nameEl = document.createElement("h2")
 var searchFormEl = document.querySelector("#submit");
-// var searchRes = document.querySelector("#search-name");
-// var searchLoc = document.querySelector("#search-loc");
-console.log("hello");
+                                      
 function searchApi(place) {
   console.log(place);
   var locQueryUrl =
@@ -29,7 +27,6 @@ function searchApi(place) {
 function handleSearchFormSubmit(event) {
   event.preventDefault();
 
-//   var searchRes = document.querySelector("#search-name").value;
   var searchLoc = document.querySelector("#search-loc").value;
   console.log(searchLoc);
 
@@ -40,12 +37,12 @@ function handleSearchFormSubmit(event) {
 
   searchApi(searchLoc);
 }
-//searchApi("starbucks");
+
 searchFormEl.addEventListener("click", handleSearchFormSubmit);
 
 
 
-function getRandomRest(data) {
+function getRandomRest(data) {      
     console.log(data);
     var max = data.businesses;
     console.log(max);
