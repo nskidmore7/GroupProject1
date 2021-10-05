@@ -24,6 +24,7 @@ function searchApi(name, place) {
     console.log(takeresponse);
     takeresponse.json().then(function (data) {
       console.log(data);
+      generateResults(data);
     });
   });
 }
@@ -41,5 +42,10 @@ function handleSearchFormSubmit(event) {
 
   searchApi(searchRes, searchLoc);
 }
+function generateResults(data) {
+  let i = 0;
+  while (i < 5) {}
+}
+
 // searchApi("starbucks");
 searchFormEl.addEventListener("click", handleSearchFormSubmit);
