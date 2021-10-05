@@ -1,0 +1,142 @@
+* body {
+  font-family: "Oswald", sans-serif;
+  background-color: #000000;
+  color: #ffccbc;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* .title-box {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
+} */
+
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+nav {
+  background-color: #f26522;
+  }
+
+.nav-links {
+    display: flex;
+    justify-content: right;
+}
+
+a {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+}
+
+.icons {
+  transition: transform .7s;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.icons:hover {
+  transform: rotate(15deg);
+}
+
+
+.section-title {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-family: "Pacifico", cursive;
+  font-size: 80px;
+  color: #f26522;
+  position: relative;
+}
+
+.second-title {
+  font-family: "Pacifico", cursive;
+  font-size: 35px;
+  color: #ffccbc;
+  }
+
+.mini-title,
+.start {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  font-family: "Pacifico", cursive;
+  font-size: 35px;
+  color: #f26522;
+}
+
+.card-border {
+  border: #ffccbc solid;
+  border-width: 4px;
+  border-radius: 6px;
+  color: #ffccbc;
+  margin: 5px;
+  padding: 20px;
+}
+
+.card-border:hover {
+  box-shadow: 0 0 15px #f26522;
+  cursor: pointer;
+}
+
+.start:hover {
+  cursor: pointer;
+  color: #ff5252;
+  font-size: 45px;
+}
+
+.grid {
+  max-width: 960px;
+  margin: auto;
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  position: relative;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+
+.card,
+.back,
+.front {
+  height: 150px;
+  width: 150px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+  background: #FAB942;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: #52555e;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.selected {
+  transform: rotateY(180deg);
+}
+
+.match .front {
+  background: #f35e07 !important;
+}
