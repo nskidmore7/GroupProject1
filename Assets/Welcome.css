@@ -1,0 +1,125 @@
+* body{
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    }
+.img{
+height: 100%;
+width: 100%;
+
+}
+
+.top-section{
+ width: 100%;
+ height: 100%;
+ overflow: hidden;
+ position: relative;
+ background-image: url(img1.jpg);
+ background-size: cover;
+ -webkit-transition: background-image 0.2s ease-in-out;
+ transition: background-image 0.2s ease-in-out;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* text-transform: uppercase; */
+    text-align: center;
+}
+
+.logo{
+
+    background-image: url("./img/hat.png");
+margin-bottom: 30px;
+height: 107px;
+    width: 119px;
+    display: inline-block;
+}
+.content h1{
+    margin-top: 20px;
+  margin-bottom: 50px;
+  font-family: "Pacifico", cursive;
+  font-size: 120px;
+  color: black;
+  position: relative;
+    /* font-size: 80px;
+    
+    font-family: 'Pacifico', cursive; */
+
+}
+.enter{
+ padding: 12px;
+color: white;
+text-decoration: none;
+font-size: 25px;
+border-radius: 15px;
+font-family: 'Pacifico', cursive;
+background-color: blue;
+
+}
+.fa-solid fa-fork-knife{
+    
+}
+/* 
+@keyframes slide {
+    0%{
+        background-image: url(img1.jpg);
+
+    }
+    33%{
+        background-image: url(img1.jpg);
+    }
+    67%{
+        background-image: url(img1.jpg);
+    }
+} */
+
+
+.fadein {
+    position:absolute;
+    top:0px;
+    margin:auto;
+    height: 100%;
+    width: 100%;
+}
+.fadein img {
+    position:absolute;
+    /* left:-65px; */
+    top:0;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 18s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 18s;
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#f1 {
+    background-color: lightblue;
+}
+#f2 {
+    -webkit-animation-delay: -12s;
+    background-color: yellow;
+}
+#f3 {
+    -webkit-animation-delay: -6s;
+    background-color: lightgreen;
+}
