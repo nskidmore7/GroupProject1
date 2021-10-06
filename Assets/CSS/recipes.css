@@ -1,0 +1,155 @@
+* body {
+  font-family: "Oswald", sans-serif;
+  /* font-family: "Pacifico", cursive; */
+  background-image: url(../Images/recipes1.jpg); 
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-color: black;
+}
+
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+nav {
+  background-color: #f26522;
+  }
+
+.nav-links {
+    display: flex;
+    justify-content: right;
+}
+
+.icons {
+  transition: transform .7s;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.icons:hover {
+  transform: rotate(15deg);
+}
+
+h1 {
+  margin: 0;
+}
+
+.size {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: bisque;
+  }
+
+
+
+.modal h6 {
+  font-weight: bolder;
+  color:coral;
+  font-size: 20px;
+}
+
+h4 {
+  font-weight: bolder;
+  color:coral;
+  font-size: 40px;
+  font-family: "Pacifico", cursive;
+}
+
+.container {
+  background-color: transparent;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 15px;
+}
+
+.planner {
+
+  font-size: 20px;
+}
+
+.favorites {
+  padding: 12px;
+}
+
+
+.btn {
+  text-align: center;
+  text-transform: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #e56903;
+  color: black;
+  font-weight: bolder;
+}
+
+.btn:hover {
+  background-color: #695b4f;
+}
+
+.btn-small {
+  text-align: center;
+  text-transform: none;
+  padding: 0;
+  border-radius: 5px;
+  margin: 15px;
+  background-color: #e56903;
+  color: black;
+}
+
+.btn-flat {
+  padding: 0;
+  color: #e56903;
+}
+
+#random-btn {
+  margin-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#user-search {
+  max-width: 80%;
+}
+
+.card-action button {
+  border-radius: 5px;
+  background-color: #e59d03;
+  text-transform: none;
+  color: black;
+  font-weight: bolder;
+}
+
+textarea.materialize-textarea {
+  background-color: #616161;
+  color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 2px;
+  margin: 0;
+}
+
+.links {
+  background-color: #616161;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 2px;
+  margin: 0;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.card-panel .row {
+  margin-bottom: 0;
+}
