@@ -5,8 +5,8 @@ function searchApi(place) {
   console.log(place);
   var locQueryUrl =
     "https://cors-anywhere.herokuapp.com/" +
-    "https://api.yelp.com/v3/businesses/search?location=" +
-    place;
+    "https://api.yelp.com/v3/businesses/search?restaurants&location=" +
+    place + "&limit=50";
   fetch(locQueryUrl, {
     method: "GET",
     headers: {
@@ -54,6 +54,11 @@ function getRandomRest(data) {
 
 
   var name = data.businesses[i].name;
-  nameEl.innertext = name;
-  h2.append(nameEl)
+  var nameEl = document.createElement("h2");
+    nameEl.innerText = name;
+    console.log(nameEl);
+    h2.append(nameEl);
 }
+
+let h2 = document.createElement("h2")
+h2.append("")
