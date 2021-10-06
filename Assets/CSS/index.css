@@ -4,27 +4,35 @@ body {
   color: #ffccbc;
 }
 
-.logo {
-  font-family: "Pacifico", cursive;
-  font-size: 40px;
-  margin-bottom: 10px;
-  margin-left: 5px;
+.title-box {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.second-title {
+  font-size: 35px;
+  cursor: pointer;
+  color: azure;
 }
 
 .icons {
+  margin-top: 50px;
   transition: transform .7s;
-  width: 50px;
-  height: 50px;
-  margin-top: 10px;
 }
-​
+
 .icons:hover {
-  transform: rotate(15deg);
+  transform: rotate(25deg);
 }
-​
+
 .enter:hover {
   cursor: pointer;
   color: #ff5252;
   font-size: 45px;
 }
-​
+
+.h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 80px;
+  color: #f26522;
+}
