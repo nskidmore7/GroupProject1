@@ -13,21 +13,21 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./Assets/list.css" />
+    <link rel="stylesheet" href="./Assets/CSS/reset.css" />
+    <link rel="stylesheet" href="./Assets/CSS/wishdish.css" />
   </head>
   <body>
     <nav>
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo center">Logo</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <!-- Dropdown Trigger -->
-          <li>
-            <a class="dropdown-trigger" href="#!" data-target="dropdown1"
-              >Dropdown<i class="material-icons right">arrow_drop_down</i></a
-            >
-          </li>
+        <a href="index.html"
+          ><img class="icons" src="./Assets/Images/logo.png"
+        /></a>
+        <div class="brand-logo logo">Recipes</div>
+        <ul id="nav-mobile nav-links" class="right hide-on-med-and-down">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="restaurants.html">Restaurants</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="game.html">Game Zone</a></li>
         </ul>
       </div>
     </nav>
@@ -162,8 +162,11 @@
         </div>
       </div>
     </div>
-
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-2.1.1.min.js"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="Assets/list.js"></script>
+    <script src="./Assets/JS/wishdish.js"></script>
   </body>
 </html>

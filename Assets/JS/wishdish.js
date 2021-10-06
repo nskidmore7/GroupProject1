@@ -23,7 +23,6 @@ function searchApi(name, place) {
       "Content-Type": "application/json",
     },
   }).then(function (takeresponse) {
-    console.log(takeresponse);
     takeresponse.json().then(function (data) {
       console.log(data);
       generateResults(data);
@@ -45,6 +44,7 @@ function handleSearchFormSubmit(event) {
   searchApi(searchRes, searchLoc);
 }
 function generateResults(data) {
+  var 
   let i = 0;
   while (i < 5) {
     var name = data.businesses[i].name;
