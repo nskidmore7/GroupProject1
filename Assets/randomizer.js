@@ -71,12 +71,9 @@ function getRandomRest(data) {
   var url = data.businesses[i].url;
   console.log(url);
   var urlEl = document.createElement("a");
-  var link = document.createTextNode("Restaurant");
     urlEl.appendChild(link);
-    urlEl.innerHTML = url;
+    urlEl.innerHTML = "Restuarant Link";
     urlEl.href = url;
     urlEl.target = "blank";
     randomRest.appendChild(urlEl);
-
- 
 }
