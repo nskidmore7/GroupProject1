@@ -1,4 +1,5 @@
-var nameEl = document.createElement("h2")
+var nameEl = document.createElement("randomRest")
+var addrEl = document.createElement("display_address")
 var searchFormEl = document.querySelector("#submit");
                                       
 function searchApi(place) {
@@ -56,9 +57,10 @@ function getRandomRest(data) {
   var name = data.businesses[i].name;
   var nameEl = document.createElement("h2");
     nameEl.innerText = name;
-    console.log(nameEl);
-    h2.append(nameEl);
-}
+    randomRest.appendChild(nameEl);
 
-let h2 = document.createElement("h2")
-h2.append("h2")
+  var display_address = data.businesses[i].display_address;
+  var addrEl = document.createElement("h2");
+    addrEl.innerText = display_address;
+    display_address.appendChild(addrEl);
+}
