@@ -9,7 +9,7 @@ function searchApi(name, place) {
   console.log(place);
   var locQueryUrl =
     "https://cors-anywhere.herokuapp.com/" +
-    "https://api.yelp.com/v3/businesses/search?term=" +
+    "https://api.yelp.com/v3/businesses/search?categories=restaurants&term=" +
     name +
     "&location=" +
     place;
@@ -49,7 +49,7 @@ function generateResults(data) {
   while (i < 5) {
     var name = data.businesses[i].name;
     console.log(name);
-    var nameEl = document.createElement("li");
+    var nameEl = document.createElement("button");
     nameEl.innerText = name;
     console.log(nameEl);
     searchResultsEl.appendChild(nameEl);
@@ -59,3 +59,4 @@ function generateResults(data) {
 
 // searchApi("starbucks");
 searchFormEl.addEventListener("click", handleSearchFormSubmit);
+searchResultsEl.addEventListener("click", function (event) {});
