@@ -61,4 +61,4 @@ function getRandomRest(data) {
 }
 
 let h2 = document.createElement("h2")
-h2.append("")
+h2.append("h2")
