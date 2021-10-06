@@ -1,5 +1,3 @@
-var nameEl = document.createElement("randomRest")
-var addrEl = document.createElement("display_address")
 var searchFormEl = document.querySelector("#submit");
                                       
 function searchApi(place) {
@@ -53,14 +51,32 @@ function getRandomRest(data) {
     console.log(i);
   
 
-
-  var name = data.businesses[i].name;
+  var name = data.businesses[i].name; 
   var nameEl = document.createElement("h2");
     nameEl.innerText = name;
     randomRest.appendChild(nameEl);
 
-  var display_address = data.businesses[i].display_address;
+  var display_address = data.businesses[i].location.display_address;
+  console.log(display_address);
   var addrEl = document.createElement("h2");
-    addrEl.innerText = display_address;
-    display_address.appendChild(addrEl);
+    addrEl.innerHTML = display_address;
+    randomRest.appendChild(addrEl);
+
+  var display_phone = data.businesses[i].display_phone;
+  console.log(display_phone);
+  var phoneEl = document.createElement("h2");
+    phoneEl.innerHTML = display_phone;
+    randomRest.appendChild(phoneEl);
+
+  var url = data.businesses[i].url;
+  console.log(url);
+  var urlEl = document.createElement("a");
+  var link = document.createTextNode("Restaurant");
+    urlEl.appendChild(link);
+    urlEl.innerHTML = url;
+    urlEl.href = url;
+    urlEl.target = "blank";
+    randomRest.appendChild(urlEl);
+
+ 
 }
