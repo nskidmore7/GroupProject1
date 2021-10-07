@@ -1,4 +1,4 @@
-var searchFormEl = document.querySelector("#search-button");
+var searchFormEl = document.querySelector("#search-btn");
 
 console.log("hello");
 function searchApi(name, place) {
