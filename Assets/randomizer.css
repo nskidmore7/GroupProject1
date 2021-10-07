@@ -3,3 +3,17 @@
     background-color: black;
     }
 
+#randomRest{
+    background-color: lightgrey;
+    align-items: center;
+}
+
+h1{
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a :hover{
+    color: red;
+}

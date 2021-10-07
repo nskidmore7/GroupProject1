@@ -40,7 +40,6 @@ function handleSearchFormSubmit(event) {
 searchFormEl.addEventListener("click", handleSearchFormSubmit);
 
 
-
 function getRandomRest(data) {      
     console.log(data);
     var max = data.businesses;
@@ -57,7 +56,7 @@ function getRandomRest(data) {
     randomRest.appendChild(imgEl);
 
   var name = data.businesses[i].name; 
-  var nameEl = document.createElement("h2");
+  var nameEl = document.createElement("h1");
     nameEl.innerText = name;
     randomRest.appendChild(nameEl);
 
