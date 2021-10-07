@@ -1,5 +1,6 @@
 var searchFormEl = document.querySelector("#submit");
-                                      
+var randomRest = document.querySelector("#randomRest");
+                           
 function searchApi(place) {
   console.log(place);
   var locQueryUrl =
@@ -33,14 +34,18 @@ function handleSearchFormSubmit(event) {
     console.error("You need a search input value!");
     return;
   }
+  // if (searchLoc){
 
+  // }
   searchApi(searchLoc);
 }
 
 searchFormEl.addEventListener("click", handleSearchFormSubmit);
+{/* <input type="button" onclick="this.form.reset();"></input> */}
 
 
-function getRandomRest(data) {      
+function getRandomRest(data) { 
+  var container = document.createElement("div");     
     console.log(data);
     var max = data.businesses;
     console.log(max);
@@ -53,24 +58,30 @@ function getRandomRest(data) {
   console.log(image_url);
     var imgEl = document.createElement("img");
     imgEl.src = image_url;
-    randomRest.appendChild(imgEl);
+    container.appendChild(imgEl);
 
   var name = data.businesses[i].name; 
   var nameEl = document.createElement("h1");
     nameEl.innerText = name;
-    randomRest.appendChild(nameEl);
+    // randomRest.html(nameEl);
+    container.appendChild(nameEl);
 
   var display_address = data.businesses[i].location.display_address;
   console.log(display_address);
   var addrEl = document.createElement("h2");
     addrEl.innerHTML = display_address;
-    randomRest.appendChild(addrEl);
+    // randomRest.html(addrEl);
+    container.appendChild(addrEl);
+
+    
 
   var display_phone = data.businesses[i].display_phone;
   console.log(display_phone);
   var phoneEl = document.createElement("h2");
     phoneEl.innerHTML = display_phone;
-    randomRest.appendChild(phoneEl);
+    // randomRest.html(phoneEl);
+    container.appendChild(phoneEl);
+
 
   var url = data.businesses[i].url;
   console.log(url);
@@ -78,6 +89,19 @@ function getRandomRest(data) {
     urlEl.innerHTML = "Restaurant Link";
     urlEl.href = url;
     urlEl.target = "blank";
-    randomRest.appendChild(urlEl);
+    // randomRest.innerhtml(urlEl);
+    container.appendChild(urlEl);
 
+    $("#randomRest").html(container);
+
+    // $(this).find('randomRest').get(0).reset();
+    
+    // var resetDiv = document.getElementById("img");
+    // resetDiv.remove();
+    // document.getElementById("randomRest").reset();
+    
 }
+// getRandomRest.reset();
+// function resetRest(){
+ 
+// }
