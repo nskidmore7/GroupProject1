@@ -1,5 +1,5 @@
 var searchFormEl = document.querySelector("#search-btn");
-
+// var wishDishEl = document.querySelector("#wish-dish");
 console.log("hello");
 function searchApi(name, place) {
   console.log(name);
@@ -40,6 +40,47 @@ function handleSearchFormSubmit(event) {
 
   searchApi(searchRes, searchLoc);
 }
+function createWishDish() {
+  var existingList = JSON.parse(localStorage.getItem("wishDish"));
+  var wishDishList = $("#wish-dish");
+  if (existingList !== null) {
+    var listLength = existingList.length;
+    console.log(listLength);
+    for (let i = 0; i < listLength; i++) {
+      var restaurant = existingList[i];
+      console.log(restaurant);
+
+      var addressKey = Object.keys(restaurant)[2];
+      var address = restaurant[addressKey];
+      console.log(address);
+      var imageKey = Object.keys(restaurant)[0];
+      var image = restaurant[imageKey];
+      console.log(image);
+      var nameKey = Object.keys(restaurant)[1];
+      var name = restaurant[nameKey];
+      console.log(name);
+      var urlKey = Object.keys(restaurant)[3];
+      var site = restaurant[urlKey];
+      console.log(site);
+
+      var card = $(`<div class="card-panel grey lighten-5 z-depth-1" >
+    <div class="row valign-wrapper" id = "card">
+      <div class="col s3">
+        <img src="${image}" alt="image of ${name}" class="circle responsive-img" id= "image">
+      </div>
+      <div class="col s9">
+        <span class="black-text flow-text" id="name">${name}</span>
+        <span class="black-text flow-text" id = "address">${address}</span>
+        <br>
+        <a href="${site}" target="_blank" id ="yelp">Yelp Page</a>
+        <a class="waves-effect waves-light btn" id = "delete">Remove from WishDish</a>
+      </div>
+      </div>
+    </div>`);
+      wishDishList.append(card);
+    }
+  }
+}
 
 searchResults.addEventListener("click", function (event) {
   var existingEntries = JSON.parse(localStorage.getItem("wishDish"));
@@ -63,6 +104,7 @@ searchResults.addEventListener("click", function (event) {
   localStorage.setItem("saveItem", JSON.stringify(saveItem));
   existingEntries.push(saveItem);
   localStorage.setItem("wishDish", JSON.stringify(existingEntries));
+  createWishDish();
 });
 
 function generateResults(data) {
