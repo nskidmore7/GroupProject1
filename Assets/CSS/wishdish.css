@@ -1,9 +1,8 @@
 * body {
     font-family: "Oswald", sans-serif;
     background-image: url(../Images/wishdish.png); 
-    background-repeat: repeat-x;
-    background-size: cover;
-    background-color: black;
+    height: 100vh;
+      background-size: cover;
   }
   
   .logo {
