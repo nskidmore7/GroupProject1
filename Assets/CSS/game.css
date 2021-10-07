@@ -23,20 +23,15 @@
 
 nav {
   background-color: #f26522;
-  }
-
-.nav-links {
-    display: flex;
-    justify-content: right;
 }
 
-a {
-  font-family: "Pacifico", cursive;
-  font-size: 20px;
+.nav-links {
+  display: flex;
+  justify-content: right;
 }
 
 .icons {
-  transition: transform .7s;
+  transition: transform 0.7s;
   width: 50px;
   height: 50px;
   margin-top: 10px;
@@ -45,7 +40,6 @@ a {
 .icons:hover {
   transform: rotate(15deg);
 }
-
 
 .section-title {
   margin-top: 30px;
@@ -60,7 +54,7 @@ a {
   font-family: "Pacifico", cursive;
   font-size: 35px;
   color: #ffccbc;
-  }
+}
 
 .mini-title,
 .start {
@@ -102,7 +96,7 @@ a {
 
 .card {
   position: relative;
-  transition: all .4s linear;
+  transition: all 0.4s linear;
   transform-style: preserve-3d;
   margin: 5px;
 }
@@ -122,16 +116,20 @@ a {
 
 .front {
   z-index: 2;
-  background: #FAB942;
+  background: #fab942;
 }
 
 .back {
   transform: rotateY(180deg);
-  background-color: #52555e;
-  background-size: contain;
+  -webkit-transform: rotateY(
+180deg);
+  /* background-color: #52555e; */
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  backface-visibility: visible;
 }
+
 
 .selected {
   transform: rotateY(180deg);
@@ -139,4 +137,8 @@ a {
 
 .match .front {
   background: #f35e07 !important;
+  /* display: done; */
+}
+.match {
+  visibility: hidden;
 }
