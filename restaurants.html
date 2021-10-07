@@ -6,56 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Assets/CSS/reset.css">
     <link rel="stylesheet" href="./Assets/CSS/restaurants.css">
-  
-    <!-- title -->
-    <title>Restaurants</title>
-    <link rel="icon" href="./Assets/Images/logo1.png" type="image/png">    
-  
-  </head>
 </head>
 
 <body>
- <!-- nav -->
- <nav>
-  <div class="nav-wrapper">
-    <a href="index.html"><img class="icons" src="./Assets/Images/logo.png"></a>
-    <div class="brand-logo logo">Restaurants</div>
-    <ul id="nav-mobile nav-links" class="right hide-on-med-and-down">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="recipes.html">Recipes</a></li>
-      <li><a href="wishdish.html">WishDish</a></li>
-      <li><a href="game.html">Game Zone</a></li>
-    </ul>
-  </div>
-</nav>
-<div class="input-field">
-  <!-- <form>
-  <input id="search-loc" type="search" required />
-  <label class="label-icon" for="search"><i>City</i></label>
-<button type="submit" class="btn prefix" id="search-btn"><i class="fas fa-search"> Let Us Choose!</i></button>
-  </form>
-  </div> -->
-  <form class="col s12 m4 input-field center inline">
-    <input id="user-search" type="text">
-    <label class="active" for="user-search">Search by City</label>
-    <button type="submit" class="btn let" id="search-btn"><i class="fas fa-search"> Let Us Choose!</i></button>
-    <br>
-    <br>
-      <p>Powered By Yelp <a href="https://www.yelp.com" target="blank"><img class="yelp" src="./Assets/Images/yelp_burst.png"></a></p>
-  </form>
-</div>
- <!-- <form id="search-form">
+<!-- Dropdown Structure -->
+<!-- <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a></li>
+  </ul> -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">WishDish</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <!-- Dropdown Trigger -->
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <form id="search-form">
     <div class="input-field">
       <input id="search-loc" type="search" required />
-      <label id="user-search" class="label-icon" for="search"><i>City</i></label>
-    </div> -->
-    <!-- <button
+      <label class="label-icon" for="search"><i>City</i></label>
+      <!-- <i class="material-icons">close</i> -->
+    </div>
+    <button
       class="btn waves-effect waves-light"
       type="submit"
       name="action"
@@ -63,25 +44,17 @@
     >
       Let Us Choose!
       <i class="material-icons right"></i>
-    </button> -->
-  <!-- <div class="card-action">
-   
-    <a href="https://www.yelp.com" target="blank"></a>
-  </div> -->
+    </button>
+  </form>
 
-  <div class="card horizontal">
-    <!-- <div class="card-image">
-    <img src=""/> -->
-    </div>
-    <div class="card-stacked">
-      <div class="card-content">
-        <h2 id="randomRest"></h2>
-        <h2 id="display_address"></h2>
-      </div>
-    <div class="card-action"></div>
-    </div>
+
+  <div class="card-action">
+    <p>Powered By</p>
+    <a href="https://www.yelp.com" target="blank"></a>
   </div>
 
+<div id="randomRest"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
  <script src="./Assets/JS/restaurants.js"></script>
 
