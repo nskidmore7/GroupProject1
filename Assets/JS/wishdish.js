@@ -1,4 +1,4 @@
-var searchFormEl = document.querySelector("#submit");
+var searchFormEl = document.querySelector("#search-button");
 
 console.log("hello");
 function searchApi(name, place) {
@@ -64,6 +64,7 @@ searchResults.addEventListener("click", function (event) {
   existingEntries.push(saveItem);
   localStorage.setItem("wishDish", JSON.stringify(existingEntries));
 });
+
 function generateResults(data) {
   var searchResults = $("#searchResults");
   searchResults.empty();
