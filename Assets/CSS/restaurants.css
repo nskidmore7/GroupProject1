@@ -1,3 +1,26 @@
+* body{
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
+    }
+
+#randomRest{
+    background-color: lightgrey;
+    align-items: center;
+}
+
+h1{
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+a :hover{
+    color: red;
+}
 * body {
     font-family: "Oswald", sans-serif;
     background-image: url(../Images/restaurants.jpg); 
