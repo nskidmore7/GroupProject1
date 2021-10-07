@@ -21,3 +21,62 @@ h2{
 a :hover{
     color: red;
 }
+* body {
+    font-family: "Oswald", sans-serif;
+    background-image: url(../Images/restaurants.jpg); 
+    background-size: cover;
+    height: 100vh;
+      }
+  
+  .logo {
+    font-family: "Pacifico", cursive;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+  }
+  
+  nav {
+    background-color: #f26522;
+    }
+  
+  .nav-links {
+      display: flex;
+      justify-content: right;
+  }
+  
+  .icons {
+    transition: transform .7s;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+  }
+  
+  .icons:hover {
+    transform: rotate(15deg);
+  }
+
+  .let {
+    text-align: center;
+    text-transform: none;
+    padding-left: 20px;
+    padding-right: 5px;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #e56903;
+    color: black;
+    font-weight: bolder;
+  }
+  
+  .let:hover {
+    background-color: #695b4f;
+  }
+
+  .yelp {
+    width:20px; 
+    height:20px;
+  }
+
+  #user-search {
+    max-width: 80%;
+  }

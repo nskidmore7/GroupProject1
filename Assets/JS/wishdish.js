@@ -1,5 +1,6 @@
 var searchFormEl = document.querySelector("#search-btn");
-
+// var searchResultsBtn = document.querySelectorAll("#save");
+// var wishDishEl = document.querySelector("#wish-dish");
 console.log("hello");
 function searchApi(name, place) {
   console.log(name);
@@ -40,30 +41,73 @@ function handleSearchFormSubmit(event) {
 
   searchApi(searchRes, searchLoc);
 }
+function createWishDish() {
+  var existingList = JSON.parse(localStorage.getItem("wishDish"));
+  var wishDishList = $("#wish-dish");
+  wishDishList.empty();
+  if (existingList !== null) {
+    var listLength = existingList.length;
+    console.log(listLength);
+    for (let i = 0; i < listLength; i++) {
+      var restaurant = existingList[i];
+      console.log(restaurant);
 
-searchResults.addEventListener("click", function (event) {
-  var existingEntries = JSON.parse(localStorage.getItem("wishDish"));
-  if (existingEntries == null) existingEntries = [];
-  var target = event.target;
-  var saveTarget = target.closest("#card");
-  var saveImage = saveTarget.querySelector("#image").src;
-  console.log(saveImage);
-  var saveName = saveTarget.querySelector("#name").innerText;
-  console.log(saveName);
-  var saveAddress = saveTarget.querySelector("#address").innerText;
-  console.log(saveAddress);
-  var saveUrl = saveTarget.querySelector("#yelp").href;
-  console.log(saveUrl);
-  var saveItem = {
-    image: saveImage,
-    name: saveName,
-    address: saveAddress,
-    url: saveUrl,
-  };
-  localStorage.setItem("saveItem", JSON.stringify(saveItem));
-  existingEntries.push(saveItem);
-  localStorage.setItem("wishDish", JSON.stringify(existingEntries));
-});
+      var addressKey = Object.keys(restaurant)[2];
+      var address = restaurant[addressKey];
+      console.log(address);
+      var imageKey = Object.keys(restaurant)[0];
+      var image = restaurant[imageKey];
+      console.log(image);
+      var nameKey = Object.keys(restaurant)[1];
+      var name = restaurant[nameKey];
+      console.log(name);
+      var urlKey = Object.keys(restaurant)[3];
+      var site = restaurant[urlKey];
+      console.log(site);
+
+      var card = $(`<div class="card-panel grey lighten-5 z-depth-1" >
+    <div class="row valign-wrapper" id = "card">
+      <div class="col s3">
+        <img src="${image}" alt="image of ${name}" class="circle responsive-img" id= "image">
+      </div>
+      <div class="col s9">
+        <span class="black-text flow-text" id="name">${name}</span>
+        <span class="black-text flow-text" id = "address">${address}</span>
+        <br>
+        <a href="${site}" target="_blank" id ="yelp">Yelp Page</a>
+        <a class="waves-effect waves-light btn delete" id = "delete" data-name="${name}">Remove from WishDish</a>
+      </div>
+      </div>
+    </div>`);
+      wishDishList.append(card);
+    }
+  }
+}
+
+// searchResultsBtn.addEventListener("click", function (event) {
+//   var existingEntries = JSON.parse(localStorage.getItem("wishDish"));
+//   if (existingEntries == null) existingEntries = [];
+//   var target = event.target;
+//   var saveTarget = target.closest("#card");
+//   var saveImage = saveTarget.querySelector("#image").src;
+//   console.log(saveImage);
+//   var saveName = saveTarget.querySelector("#name").innerText;
+//   console.log(saveName);
+//   var saveAddress = saveTarget.querySelector("#address").innerText;
+//   console.log(saveAddress);
+//   var saveUrl = saveTarget.querySelector("#yelp").href;
+//   console.log(saveUrl);
+//   var saveItem = {
+//     image: saveImage,
+//     name: saveName,
+//     address: saveAddress,
+//     url: saveUrl,
+//   };
+//   localStorage.setItem("saveItem", JSON.stringify(saveItem));
+//   existingEntries.push(saveItem);
+//   localStorage.setItem("wishDish", JSON.stringify(existingEntries));
+//   createWishDish();
+// });
 
 function generateResults(data) {
   var searchResults = $("#searchResults");
@@ -98,7 +142,7 @@ function generateResults(data) {
         <span class="black-text flow-text" id = "address">${address}</span>
         <br>
         <a href="${site}" target="_blank" id ="yelp">Yelp Page</a>
-        <a class="waves-effect waves-light btn" id = "save">Save to WishDish</a>
+        <a class="waves-effect waves-light btn save" id = "save">Save to WishDish</a>
       </div>
       </div>
     </div>`);
@@ -108,4 +152,55 @@ function generateResults(data) {
   }
 }
 
+$(document).on("click", ".save", function (event) {
+  console.log("hello save");
+  var existingEntries = JSON.parse(localStorage.getItem("wishDish"));
+  if (existingEntries == null) existingEntries = [];
+  var target = event.target;
+  var saveTarget = target.closest("#card");
+  var saveImage = saveTarget.querySelector("#image").src;
+  console.log(saveImage);
+  var saveName = saveTarget.querySelector("#name").innerText;
+  console.log(saveName);
+  var saveAddress = saveTarget.querySelector("#address").innerText;
+  console.log(saveAddress);
+  var saveUrl = saveTarget.querySelector("#yelp").href;
+  console.log(saveUrl);
+  var saveItem = {
+    image: saveImage,
+    name: saveName,
+    address: saveAddress,
+    url: saveUrl,
+  };
+  localStorage.setItem("saveItem", JSON.stringify(saveItem));
+  existingEntries.push(saveItem);
+  localStorage.setItem("wishDish", JSON.stringify(existingEntries));
+  createWishDish();
+});
+
+$(document).on("click", ".delete", function (event) {
+  console.log("hello delete");
+
+  var nameDel = $(this).attr("data-name");
+  console.log(nameDel);
+
+  var target = event.target;
+  var deleteTarget = target.closest(".card-panel");
+  deleteTarget.remove();
+  var wishDish = JSON.parse(localStorage.getItem("wishDish"));
+  for (let i = 0; i < wishDish.length; i++) {
+    console.log(wishDish[i].name);
+    if (wishDish[i].name === nameDel) {
+      console.log(wishDish[i]);
+      wishDish.splice(i, 1);
+      console.log(wishDish);
+      localStorage.setItem("wishDish", JSON.stringify(wishDish));
+    }
+  }
+  // localStorage.setItem("saveItem", JSON.stringify(saveItem));
+  // existingEntries.push(saveItem);
+  // localStorage.setItem("wishDish", JSON.stringify(existingEntries));
+  // createWishDish();
+});
+createWishDish();
 searchFormEl.addEventListener("click", handleSearchFormSubmit);
