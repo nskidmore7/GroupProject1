@@ -50,7 +50,12 @@ function getRandomRest(data) {
     let i = Math.floor(Math.random() * maxL);
     console.log(i);
   
-
+    var image_url = data.businesses[i].image_url;
+  console.log(image_url);
+    var imgEl = document.createElement("img");
+    imgEl.src = image_url;
+    randomRest.appendChild(imgEl);
+    
   var name = data.businesses[i].name; 
   var nameEl = document.createElement("h2");
     nameEl.innerText = name;
@@ -71,11 +76,10 @@ function getRandomRest(data) {
   var url = data.businesses[i].url;
   console.log(url);
   var urlEl = document.createElement("a");
-    urlEl.innerHTML = "Restuarant Link";
+    urlEl.innerHTML = "Restaurant Link";
     urlEl.href = url;
     urlEl.target = "blank";
     randomRest.appendChild(urlEl);
 
-    var image_url = data.businesses[i].image_url;
-  console.log(image_url);
+
 }
