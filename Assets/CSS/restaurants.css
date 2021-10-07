@@ -1,9 +1,9 @@
 * body {
     font-family: "Oswald", sans-serif;
-    background-image: url(../Images/wishdish.png); 
+    background-image: url(../Images/restaurants.jpg); 
+    background-size: cover;
     height: 100vh;
-      background-size: cover;
-  }
+      }
   
   .logo {
     font-family: "Pacifico", cursive;
@@ -17,10 +17,10 @@
     }
   
   .nav-links {
-       display: flex;
+      display: flex;
       justify-content: right;
   }
-    
+  
   .icons {
     transition: transform .7s;
     width: 50px;
@@ -31,13 +31,13 @@
   .icons:hover {
     transform: rotate(15deg);
   }
-  
-  .btn {
+
+  .let {
     text-align: center;
     text-transform: none;
-    padding-left: 5px;
+    padding-left: 20px;
     padding-right: 5px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-left: 5px;
     margin-right: 5px;
     background-color: #e56903;
@@ -45,8 +45,15 @@
     font-weight: bolder;
   }
   
-  .btn:hover {
+  .let:hover {
     background-color: #695b4f;
   }
-  
-  
+
+  .yelp {
+    width:20px; 
+    height:20px;
+  }
+
+  #user-search {
+    max-width: 80%;
+  }
