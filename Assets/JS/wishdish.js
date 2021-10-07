@@ -1,7 +1,5 @@
 var searchFormEl = document.querySelector("#submit");
 
-var searchResultsEl = document.querySelector("#searchResults");
-
 console.log("hello");
 function searchApi(name, place) {
   console.log(name);
@@ -42,6 +40,30 @@ function handleSearchFormSubmit(event) {
 
   searchApi(searchRes, searchLoc);
 }
+
+searchResults.addEventListener("click", function (event) {
+  var existingEntries = JSON.parse(localStorage.getItem("wishDish"));
+  if (existingEntries == null) existingEntries = [];
+  var target = event.target;
+  var saveTarget = target.closest("#card");
+  var saveImage = saveTarget.querySelector("#image").src;
+  console.log(saveImage);
+  var saveName = saveTarget.querySelector("#name").innerText;
+  console.log(saveName);
+  var saveAddress = saveTarget.querySelector("#address").innerText;
+  console.log(saveAddress);
+  var saveUrl = saveTarget.querySelector("#yelp").href;
+  console.log(saveUrl);
+  var saveItem = {
+    image: saveImage,
+    name: saveName,
+    address: saveAddress,
+    url: saveUrl,
+  };
+  localStorage.setItem("saveItem", JSON.stringify(saveItem));
+  existingEntries.push(saveItem);
+  localStorage.setItem("wishDish", JSON.stringify(existingEntries));
+});
 function generateResults(data) {
   var searchResults = $("#searchResults");
   searchResults.empty();
@@ -65,17 +87,17 @@ function generateResults(data) {
     var address = restaurant.location.display_address;
     console.log(address);
     var image = restaurant.image_url;
-    var card = $(`<div class="card-panel grey lighten-5 z-depth-1">
-    <div class="row valign-wrapper">
+    var card = $(`<div class="card-panel grey lighten-5 z-depth-1" >
+    <div class="row valign-wrapper" id = "card">
       <div class="col s3">
-        <img src="${image}" alt="image of ${name}" class="circle responsive-img">
+        <img src="${image}" alt="image of ${name}" class="circle responsive-img" id= "image">
       </div>
       <div class="col s9">
-        <span class="black-text flow-text">${name}</span>
-        <span class="black-text flow-text">${address}</span>
+        <span class="black-text flow-text" id="name">${name}</span>
+        <span class="black-text flow-text" id = "address">${address}</span>
         <br>
-        <a href="${site}" target="_blank">Yelp Page</a>
-      
+        <a href="${site}" target="_blank" id ="yelp">Yelp Page</a>
+        <a class="waves-effect waves-light btn" id = "save">Save to WishDish</a>
       </div>
       </div>
     </div>`);
@@ -86,4 +108,3 @@ function generateResults(data) {
 }
 
 searchFormEl.addEventListener("click", handleSearchFormSubmit);
-searchResultsEl.addEventListener("click", function (event) {});
