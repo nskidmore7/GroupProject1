@@ -4,38 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WishDish</title>
+<!-- links -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"/>
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Assets/CSS/reset.css" />
     <link rel="stylesheet" href="./Assets/CSS/wishdish.css" />
+      
     <!-- title -->
-    <title>WishDish</title>
-    <link rel="icon" href="./Assets/Images/logo1.png" type="image/png">  
-</head>
-<body>
+      <title>Foodie</title>
+      <link rel="icon" href="./Assets/Images/logo1.png" type="image/png">      
+    
+  </head>
+  <body>
     <!-- nav bar -->
     <nav>
-            <div class="nav-wrapper">
-              <a href="index.html"><img class="icons" src="./Assets/Images/logo.png"></a>
-              <div class="brand-logo logo">WishDish</div>
-              <ul id="nav-mobile nav-links" class="right hide-on-med-and-down">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="restaurants.html">Restaurants</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="game.html">Game Zone</a></li>
-              </ul>
-            </div>
-    </nav>
+      <div class="nav-wrapper">
+        <a href="index.html"><img class="icons" src="./Assets/Images/logo.png"></a>
+        <div class="brand-logo logo">WishDish</div>
+        <ul id="nav-mobile nav-links" class="right hide-on-med-and-down">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="restaurants.html">Restaurants</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="game.html">Game Zone</a></li>
+        </ul>
+      </div>
+</nav>
 
 
     <!-- Page Layout here -->
@@ -61,7 +60,8 @@
               <label class="label-icon" for="search"><i>City</i></label>
              
             </div>
-            <button
+            <button type="submit" class="btn prefix" id="search-btn"><i class="fas fa-search"> Search</i></button>
+            <!-- <button
               class="btn waves-effect waves-light"
               type="submit"
               name="action"
@@ -69,7 +69,7 @@
             >
               Submit
               <i class="material-icons right">send</i>
-            </button>
+            </button> -->
           </form>
           <div id="searchResults"></div>
          </div>

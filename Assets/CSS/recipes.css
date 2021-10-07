@@ -1,10 +1,9 @@
 * body {
   font-family: "Oswald", sans-serif;
-  /* font-family: "Pacifico", cursive; */
   background-image: url(../Images/recipes1.jpg); 
-  background-repeat: repeat-x;
   background-size: cover;
-  background-color: black;
+  height: 100vh;
+  
 }
 
 .logo {
