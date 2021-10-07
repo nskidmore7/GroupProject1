@@ -1,4 +1,5 @@
 var searchFormEl = document.querySelector("#search-btn");
+var searchResultsBtn = document.querySelector("#save");
 // var wishDishEl = document.querySelector("#wish-dish");
 console.log("hello");
 function searchApi(name, place) {
@@ -43,6 +44,7 @@ function handleSearchFormSubmit(event) {
 function createWishDish() {
   var existingList = JSON.parse(localStorage.getItem("wishDish"));
   var wishDishList = $("#wish-dish");
+  wishDishList.empty();
   if (existingList !== null) {
     var listLength = existingList.length;
     console.log(listLength);
@@ -82,7 +84,7 @@ function createWishDish() {
   }
 }
 
-searchResults.addEventListener("click", function (event) {
+searchResultsBtn.addEventListener("click", function (event) {
   var existingEntries = JSON.parse(localStorage.getItem("wishDish"));
   if (existingEntries == null) existingEntries = [];
   var target = event.target;
@@ -149,5 +151,5 @@ function generateResults(data) {
     i++;
   }
 }
-
+createWishDish();
 searchFormEl.addEventListener("click", handleSearchFormSubmit);
