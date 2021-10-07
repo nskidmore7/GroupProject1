@@ -32,10 +32,10 @@
     transform: rotate(15deg);
   }
 
-  .btn {
+  .let {
     text-align: center;
     text-transform: none;
-    padding-left: 200px;
+    padding-left: 20px;
     padding-right: 5px;
     border-radius: 8px;
     margin-left: 5px;
@@ -45,7 +45,7 @@
     font-weight: bolder;
   }
   
-  .btn:hover {
+  .let:hover {
     background-color: #695b4f;
   }
 

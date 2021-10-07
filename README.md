@@ -60,6 +60,7 @@ https://nskidmore7.github.io/GroupProject1/
 ## Screenshots of Deployed Application
 
 ![homepage](https://user-images.githubusercontent.com/78191579/136261645-e2c402fc-f057-4019-a512-ea909174950d.JPG)
+![restaurantspage](https://user-images.githubusercontent.com/78191579/136443669-44a49186-958a-4c2b-ac9a-543315d8cfd2.JPG)
 ![wishdish](https://user-images.githubusercontent.com/78191579/136423459-ab709e98-2340-4031-8121-259effb0293d.JPG)
 ![recipes-page](https://user-images.githubusercontent.com/78191579/136261663-04ae4205-7180-46d5-a5d2-9df046291313.JPG)
 ![game](https://user-images.githubusercontent.com/78191579/136423787-dc94eeda-565c-4a5c-abf9-5a0a00479913.JPG)
