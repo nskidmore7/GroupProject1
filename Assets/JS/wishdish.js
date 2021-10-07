@@ -192,6 +192,9 @@ $(document).on("click", ".delete", function (event) {
     console.log(wishDish[i].name);
     if (wishDish[i].name === nameDel) {
       console.log(wishDish[i]);
+      wishDish.splice(i, 1);
+      console.log(wishDish);
+      localStorage.setItem("wishDish", JSON.stringify(wishDish));
     }
   }
   // localStorage.setItem("saveItem", JSON.stringify(saveItem));
