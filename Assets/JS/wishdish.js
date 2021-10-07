@@ -1,5 +1,5 @@
 var searchFormEl = document.querySelector("#search-btn");
-var searchResultsBtn = document.querySelector("#save");
+// var searchResultsBtn = document.querySelectorAll("#save");
 // var wishDishEl = document.querySelector("#wish-dish");
 console.log("hello");
 function searchApi(name, place) {
@@ -75,7 +75,7 @@ function createWishDish() {
         <span class="black-text flow-text" id = "address">${address}</span>
         <br>
         <a href="${site}" target="_blank" id ="yelp">Yelp Page</a>
-        <a class="waves-effect waves-light btn" id = "delete">Remove from WishDish</a>
+        <a class="waves-effect waves-light btn delete" id = "delete" data-name="${name}">Remove from WishDish</a>
       </div>
       </div>
     </div>`);
@@ -84,30 +84,30 @@ function createWishDish() {
   }
 }
 
-searchResultsBtn.addEventListener("click", function (event) {
-  var existingEntries = JSON.parse(localStorage.getItem("wishDish"));
-  if (existingEntries == null) existingEntries = [];
-  var target = event.target;
-  var saveTarget = target.closest("#card");
-  var saveImage = saveTarget.querySelector("#image").src;
-  console.log(saveImage);
-  var saveName = saveTarget.querySelector("#name").innerText;
-  console.log(saveName);
-  var saveAddress = saveTarget.querySelector("#address").innerText;
-  console.log(saveAddress);
-  var saveUrl = saveTarget.querySelector("#yelp").href;
-  console.log(saveUrl);
-  var saveItem = {
-    image: saveImage,
-    name: saveName,
-    address: saveAddress,
-    url: saveUrl,
-  };
-  localStorage.setItem("saveItem", JSON.stringify(saveItem));
-  existingEntries.push(saveItem);
-  localStorage.setItem("wishDish", JSON.stringify(existingEntries));
-  createWishDish();
-});
+// searchResultsBtn.addEventListener("click", function (event) {
+//   var existingEntries = JSON.parse(localStorage.getItem("wishDish"));
+//   if (existingEntries == null) existingEntries = [];
+//   var target = event.target;
+//   var saveTarget = target.closest("#card");
+//   var saveImage = saveTarget.querySelector("#image").src;
+//   console.log(saveImage);
+//   var saveName = saveTarget.querySelector("#name").innerText;
+//   console.log(saveName);
+//   var saveAddress = saveTarget.querySelector("#address").innerText;
+//   console.log(saveAddress);
+//   var saveUrl = saveTarget.querySelector("#yelp").href;
+//   console.log(saveUrl);
+//   var saveItem = {
+//     image: saveImage,
+//     name: saveName,
+//     address: saveAddress,
+//     url: saveUrl,
+//   };
+//   localStorage.setItem("saveItem", JSON.stringify(saveItem));
+//   existingEntries.push(saveItem);
+//   localStorage.setItem("wishDish", JSON.stringify(existingEntries));
+//   createWishDish();
+// });
 
 function generateResults(data) {
   var searchResults = $("#searchResults");
@@ -142,7 +142,7 @@ function generateResults(data) {
         <span class="black-text flow-text" id = "address">${address}</span>
         <br>
         <a href="${site}" target="_blank" id ="yelp">Yelp Page</a>
-        <a class="waves-effect waves-light btn" id = "save">Save to WishDish</a>
+        <a class="waves-effect waves-light btn save" id = "save">Save to WishDish</a>
       </div>
       </div>
     </div>`);
@@ -151,5 +151,53 @@ function generateResults(data) {
     i++;
   }
 }
+
+$(document).on("click", ".save", function (event) {
+  console.log("hello save");
+  var existingEntries = JSON.parse(localStorage.getItem("wishDish"));
+  if (existingEntries == null) existingEntries = [];
+  var target = event.target;
+  var saveTarget = target.closest("#card");
+  var saveImage = saveTarget.querySelector("#image").src;
+  console.log(saveImage);
+  var saveName = saveTarget.querySelector("#name").innerText;
+  console.log(saveName);
+  var saveAddress = saveTarget.querySelector("#address").innerText;
+  console.log(saveAddress);
+  var saveUrl = saveTarget.querySelector("#yelp").href;
+  console.log(saveUrl);
+  var saveItem = {
+    image: saveImage,
+    name: saveName,
+    address: saveAddress,
+    url: saveUrl,
+  };
+  localStorage.setItem("saveItem", JSON.stringify(saveItem));
+  existingEntries.push(saveItem);
+  localStorage.setItem("wishDish", JSON.stringify(existingEntries));
+  createWishDish();
+});
+
+$(document).on("click", ".delete", function (event) {
+  console.log("hello delete");
+
+  var nameDel = $(this).attr("data-name");
+  console.log(nameDel);
+
+  var target = event.target;
+  var deleteTarget = target.closest(".card-panel");
+  deleteTarget.remove();
+  var wishDish = JSON.parse(localStorage.getItem("wishDish"));
+  for (let i = 0; i < wishDish.length; i++) {
+    console.log(wishDish[i].name);
+    if (wishDish[i].name === nameDel) {
+      console.log(wishDish[i]);
+    }
+  }
+  // localStorage.setItem("saveItem", JSON.stringify(saveItem));
+  // existingEntries.push(saveItem);
+  // localStorage.setItem("wishDish", JSON.stringify(existingEntries));
+  // createWishDish();
+});
 createWishDish();
 searchFormEl.addEventListener("click", handleSearchFormSubmit);
