@@ -55,7 +55,7 @@ function getRandomRest(data) {
     var imgEl = document.createElement("img");
     imgEl.src = image_url;
     randomRest.appendChild(imgEl);
-    
+
   var name = data.businesses[i].name; 
   var nameEl = document.createElement("h2");
     nameEl.innerText = name;
@@ -80,6 +80,5 @@ function getRandomRest(data) {
     urlEl.href = url;
     urlEl.target = "blank";
     randomRest.appendChild(urlEl);
-
 
 }
