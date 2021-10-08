@@ -1,82 +1,120 @@
-* body{
-    font-family: 'Oswald', sans-serif;
-    background-color: black;
-    }
-
-#randomRest{
-    background-color: lightgrey;
-    align-items: center;
-}
-
-h1{
-    font-size: x-large;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-h2{
-    text-decoration: underline;
-}
-
-a :hover{
-    color: red;
-}
 * body {
+  font-family: "Oswald", sans-serif;
+  background-color: black;
+  background-image: url(../Images/restaurants.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+.btn {
+  text-align: center;
+  text-transform: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  background-color: #e56903;
+  color: white;
+  font-weight: bolder;
+}
+
+.btn:hover {
+  background-color: #695b4f;
+}
+
+#randomRest {
+  background-color: rgb(159, 159, 179);
+  align-items: center;
+  margin: auto;
+  width: 50%;
+  border: 5px solid rgb(231, 160, 94);
+  border-radius: 10px;
+}
+#randomRest div {
+  align-content: center;
+  margin: auto;
+  width: 75%;
+}
+#randomRest img {
+  /* height: 60vh;
+  width: 50vw; */
+  align-content: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  border: 4px solid black;
+  border-radius: 10px;
+}
+h1 {
+  font-size: x-large;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* h2 {
+  
+} */
+
+a :hover {
+  color: red;
+}
+/* * body {
     font-family: "Oswald", sans-serif;
     background-image: url(../Images/restaurants.jpg); 
     background-size: cover;
     height: 100vh;
-      }
-  
-  .logo {
-    font-family: "Pacifico", cursive;
-    font-size: 40px;
-    margin-bottom: 10px;
-    margin-left: 5px;
-  }
-  
-  nav {
-    background-color: #f26522;
-    }
-  
-  .nav-links {
-      display: flex;
-      justify-content: right;
-  }
-  
-  .icons {
-    transition: transform .7s;
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
-  }
-  
-  .icons:hover {
-    transform: rotate(15deg);
-  }
+      } */
 
-  .let {
-    text-align: center;
-    text-transform: none;
-    padding-left: 20px;
-    padding-right: 5px;
-    border-radius: 8px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: #e56903;
-    color: black;
-    font-weight: bolder;
-  }
-  
-  .let:hover {
-    background-color: #695b4f;
-  }
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
 
-  .yelp {
-    width:20px; 
-    height:20px;
-  }
+nav {
+  background-color: #f26522;
+}
 
-  #user-search {
-    max-width: 80%;
-  }
+.nav-links {
+  display: flex;
+  justify-content: right;
+}
+
+.icons {
+  transition: transform 0.7s;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.icons:hover {
+  transform: rotate(15deg);
+}
+
+.let {
+  text-align: center;
+  text-transform: none;
+  padding-left: 20px;
+  padding-right: 5px;
+  border-radius: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #e56903;
+  color: black;
+  font-weight: bolder;
+}
+
+.let:hover {
+  background-color: #695b4f;
+}
+
+.yelp {
+  width: 80px;
+  height: 35px;
+}
+
+#search-form {
+  max-width: 25%;
+}

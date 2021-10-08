@@ -1,62 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group Project</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="./Assets/CSS/reset.css">
-    <link rel="stylesheet" href="./Assets/CSS/restaurants.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./Assets/CSS/reset.css" />
+  <link rel="stylesheet" href="./Assets/CSS/restaurants.css" />
+    
+  <!-- title -->
+    <title>Foodie</title>
+    <link rel="icon" href="./Assets/Images/logo1.png" type="image/png">  
 
-<body>
-<!-- Dropdown Structure -->
-<!-- <ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
-  </ul> -->
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">WishDish</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <!-- Dropdown Trigger -->
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-      </ul>
+  <body>
+  
+    <nav>
+      <div class="nav-wrapper">
+        <a href="index.html"
+          ><img class="icons" src="./Assets/Images/logo.png"
+        /></a>
+        <div class="brand-logo logo">Pick For Me!</div>
+        <ul id="nav-mobile nav-links" class="right hide-on-med-and-down">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="wishdish.html">WishDish</a></li>
+          <li><a href="game.html">Game Zone</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <form id="search-form">
+      <div class="input-field">
+        <input id="search-loc" type="search" required />
+        <label class="label-icon" for="search"><i>City</i></label>
+       
+      </div>
+      <button
+        class="btn waves-effect waves-light"
+        type="submit"
+        name="action"
+        id="submit"
+      >
+        Where am I eating?
+        <i class="material-icons right"></i>
+      </button>
+    </form>
+
+    <div class="card-action">
+      <p>
+        Powered By
+        <a href="https://www.yelp.com" target="blank"
+          ><img class="yelp" src="./Assets/Images/yelp_logo.png"
+        /></a>
+      </p>
     </div>
-  </nav>
 
-  <form id="search-form">
-    <div class="input-field">
-      <input id="search-loc" type="search" required />
-      <label class="label-icon" for="search"><i>City</i></label>
-      <!-- <i class="material-icons">close</i> -->
-    </div>
-    <button
-      class="btn waves-effect waves-light"
-      type="submit"
-      name="action"
-      id="submit"
-    >
-      Let Us Choose!
-      <i class="material-icons right"></i>
-    </button>
-  </form>
-
-
-  <div class="card-action">
-    <p>Powered By</p>
-    <a href="https://www.yelp.com" target="blank"></a>
-  </div>
-
-<div id="randomRest"></div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
- <script src="./Assets/JS/restaurants.js"></script>
-
-</body>
+    <div id="randomRest"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./Assets/JS/restaurants.js"></script>
+  </body>
 </html>

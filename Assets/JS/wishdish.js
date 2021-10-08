@@ -72,9 +72,9 @@ function createWishDish() {
       </div>
       <div class="col s9">
         <span class="black-text flow-text" id="name">${name}</span>
-        <span class="black-text flow-text" id = "address">${address}</span>
+        <p class="black-text flow-text address" id = "address">${address}</p>
         <br>
-        <a href="${site}" target="_blank" id ="yelp">Yelp Page</a>
+        <a href="${site}" target="_blank" id ="yelp"><img class="yelpSm" src="./Assets/Images/yelp_burst.png"></a>
         <a class="waves-effect waves-light btn delete" id = "delete" data-name="${name}">Remove from WishDish</a>
       </div>
       </div>
@@ -83,31 +83,6 @@ function createWishDish() {
     }
   }
 }
-
-// searchResultsBtn.addEventListener("click", function (event) {
-//   var existingEntries = JSON.parse(localStorage.getItem("wishDish"));
-//   if (existingEntries == null) existingEntries = [];
-//   var target = event.target;
-//   var saveTarget = target.closest("#card");
-//   var saveImage = saveTarget.querySelector("#image").src;
-//   console.log(saveImage);
-//   var saveName = saveTarget.querySelector("#name").innerText;
-//   console.log(saveName);
-//   var saveAddress = saveTarget.querySelector("#address").innerText;
-//   console.log(saveAddress);
-//   var saveUrl = saveTarget.querySelector("#yelp").href;
-//   console.log(saveUrl);
-//   var saveItem = {
-//     image: saveImage,
-//     name: saveName,
-//     address: saveAddress,
-//     url: saveUrl,
-//   };
-//   localStorage.setItem("saveItem", JSON.stringify(saveItem));
-//   existingEntries.push(saveItem);
-//   localStorage.setItem("wishDish", JSON.stringify(existingEntries));
-//   createWishDish();
-// });
 
 function generateResults(data) {
   var searchResults = $("#searchResults");
@@ -134,14 +109,14 @@ function generateResults(data) {
     var image = restaurant.image_url;
     var card = $(`<div class="card-panel grey lighten-5 z-depth-1" >
     <div class="row valign-wrapper" id = "card">
-      <div class="col s3">
+      <div class="col s4">
         <img src="${image}" alt="image of ${name}" class="circle responsive-img" id= "image">
       </div>
-      <div class="col s9">
+      <div class="col s8">
         <span class="black-text flow-text" id="name">${name}</span>
-        <span class="black-text flow-text" id = "address">${address}</span>
+        <p class="black-text flow-text address" id = "address">${address}</p>
         <br>
-        <a href="${site}" target="_blank" id ="yelp">Yelp Page</a>
+        <a href="${site}" target="_blank" id ="yelp"><img class="yelpSm" src="./Assets/Images/yelp_burst.png"></a>
         <a class="waves-effect waves-light btn save" id = "save">Save to WishDish</a>
       </div>
       </div>
@@ -197,10 +172,6 @@ $(document).on("click", ".delete", function (event) {
       localStorage.setItem("wishDish", JSON.stringify(wishDish));
     }
   }
-  // localStorage.setItem("saveItem", JSON.stringify(saveItem));
-  // existingEntries.push(saveItem);
-  // localStorage.setItem("wishDish", JSON.stringify(existingEntries));
-  // createWishDish();
 });
 createWishDish();
 searchFormEl.addEventListener("click", handleSearchFormSubmit);

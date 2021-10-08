@@ -1,52 +1,83 @@
 * body {
-    font-family: "Oswald", sans-serif;
-    background-image: url(../Images/wishdish.png); 
-    height: 100vh;
-      background-size: cover;
-  }
-  
-  .logo {
-    font-family: "Pacifico", cursive;
-    font-size: 40px;
-    margin-bottom: 10px;
-    margin-left: 5px;
-  }
-  
-  nav {
-    background-color: #f26522;
-    }
-  
-  .nav-links {
-       display: flex;
-      justify-content: right;
-  }
-    
-  .icons {
-    transition: transform .7s;
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
-  }
-  
-  .icons:hover {
-    transform: rotate(15deg);
-  }
-  
-  .btn {
-    text-align: center;
-    text-transform: none;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: #e56903;
-    color: black;
-    font-weight: bolder;
-  }
-  
-  .btn:hover {
-    background-color: #695b4f;
-  }
-  
-  
+  font-family: "Oswald", sans-serif;
+  background-image: url(../Images/wishdish.png);
+  height: 100vh;
+  background-size: cover;
+}
+
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+nav {
+  background-color: #f26522;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: right;
+}
+
+.icons {
+  transition: transform 0.7s;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.icons:hover {
+  transform: rotate(15deg);
+}
+.container {
+  width: 100%;
+  max-width: none;
+}
+.yelp {
+  width: 80px;
+  height: 35px;
+}
+
+.btn {
+  text-align: center;
+  text-transform: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #e56903;
+  color: black;
+  font-weight: bolder;
+}
+
+.btn:hover {
+  background-color: #695b4f;
+}
+
+#dark {
+  color: aliceblue;
+}
+#myWishDish {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  color: aliceblue;
+}
+
+.card-panel {
+  border: 5px solid rgb(128, 121, 161);
+  border-radius: 10px;
+  padding: 15px 15px 0px 15px;
+  margin: 0.5rem 0 1.25rem 0;
+  background-color: rgb(226, 220, 255);
+}
+
+.address {
+  font-size: 18px;
+}
+.yelpSm {
+  width: 30px;
+  height: 30px;
+}
