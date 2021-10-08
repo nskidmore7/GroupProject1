@@ -34,6 +34,7 @@ nav {
 .yelp {
   width: 80px;
   height: 35px;
+  padding-left: 10px;
 }
 
 .btn {
@@ -51,4 +52,8 @@ nav {
 
 .btn:hover {
   background-color: #695b4f;
+}
+
+#dark {
+  color: aliceblue;
 }
