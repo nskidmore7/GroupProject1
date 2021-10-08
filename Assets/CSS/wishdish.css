@@ -31,10 +31,13 @@ nav {
 .icons:hover {
   transform: rotate(15deg);
 }
+.container {
+  width: 100%;
+  max-width: none;
+}
 .yelp {
   width: 80px;
   height: 35px;
-  padding-left: 10px;
 }
 
 .btn {
@@ -66,4 +69,15 @@ nav {
 .card-panel {
   border: 5px solid rgb(128, 121, 161);
   border-radius: 10px;
+  padding: 15px 15px 0px 15px;
+  margin: 0.5rem 0 1.25rem 0;
+  background-color: rgb(226, 220, 255);
+}
+
+.address {
+  font-size: 18px;
+}
+.yelpSm {
+  width: 30px;
+  height: 30px;
 }

@@ -1,157 +1,217 @@
 <!--html-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Assets/CSS/reset.css" />
+    <link rel="stylesheet" href="./Assets/CSS/recipes.css" />
 
-  <!-- links -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./Assets/CSS/reset.css">
-  <link rel="stylesheet" href="./Assets/CSS/recipes.css">
+    <!-- title -->
+    <title>Recipes</title>
+    <link rel="icon" href="./Assets/Images/logo1.png" type="image/png" />
+  </head>
 
-  <!-- title -->
-  <title>Recipes</title>
-  <link rel="icon" href="./Assets/Images/logo1.png" type="image/png">    
+  <body>
+    <!-- nav -->
+    <nav>
+      <div class="nav-wrapper">
+        <a href="index.html"
+          ><img class="icons" src="./Assets/Images/logo.png"
+        /></a>
+        <div class="brand-logo logo">Recipes</div>
+        <ul id="nav-mobile nav-links" class="right hide-on-med-and-down">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="restaurants.html">Pick For Me!</a></li>
+          <li><a href="wishdish.html">WishDish</a></li>
+          <li><a href="game.html">Game Zone</a></li>
+        </ul>
+      </div>
+    </nav>
 
-</head>
+    <!-- main container -->
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m3 inline">
+          <p id="plannerDate" class="planner"></p>
+        </div>
+        <!-- input form -->
+        <form class="col s12 m4 input-field center inline">
+          <input id="user-search" type="text" />
+          <label class="active" for="user-search">Search by Dish Name</label>
+          <button type="submit" class="btn prefix" id="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <!-- column for drink button -->
+        <div class="col s12 m4 right inline">
+          <button
+            class="waves-effect waves-light btn modal-trigger"
+            href="#modal1"
+          >
+            Open Planner
+          </button>
+          <button class="waves-effect waves-light btn">
+            <a href="https://www.walmart.com/cp/food/976759" target="_blank"
+              >Order Grocery</a
+            >
+          </button>
+          <br />
+          <br />
+          <h5 class="size">Make me a drink!</h5>
+          <button class="waves-effect waves-light btn" id="random-btn">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
 
-<body>
- <!-- nav -->
- <nav>
-  <div class="nav-wrapper">
-    <a href="index.html"><img class="icons" src="./Assets/Images/logo.png"></a>
-    <div class="brand-logo logo">Recipes</div>
-    <ul id="nav-mobile nav-links" class="right hide-on-med-and-down">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="restaurants.html">Restaurants</a></li>
-      <li><a href="wishdish.html">WishDish</a></li>
-      <li><a href="game.html">Game Zone</a></li>
-    </ul>
-  </div>
-</nav>
+      <!-- main row -->
+      <div class="row">
+        <!-- column for search results -->
+        <div class="col s12 m9">
+          <div class="row">
+            <div class="col s12 m6">
+              <!-- empty div for recipes -->
+              <div id="recipesResults"></div>
+            </div>
+            <!-- empty div for drink -->
+            <div class="col s12 m6" id="drinkResult"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
- <!-- main container -->
- <div class="container">
+    <!-- main modal -->
+    <div id="modal1" class="modal modal-fixed-footer black lighten-4">
+      <div class="modal-content">
+        <!-- top row  -->
+        <div class="row center">
+          <h4>Meal Planner</h4>
+        </div>
 
-   <div class="row">
-     <div class="col s12 m3 inline">
-       <p id="plannerDate" class="planner"></p>
-     </div>
-     <!-- input form -->
-     <form class="col s12 m4 input-field center inline">
-       <input id="user-search" type="text">
-       <label class="active" for="user-search">Search by Dish Name</label>
-       <button type="submit" class="btn prefix" id="search-btn"><i class="fas fa-search"></i></button>
-     </form>
-     <!-- column for drink button -->
-     <div class="col s12 m4 right inline">
-      <button class="waves-effect waves-light btn modal-trigger" href="#modal1">Open Planner</button>
-      <button class="waves-effect waves-light btn"><a href="https://www.walmart.com/cp/food/976759" target="_blank">Order Grocery</a></button>
-      <br>
-      <br>
-       <h5 class="size">Make me a drink!</h5>
-       <button class="waves-effect waves-light btn" id="random-btn"><i class="fas fa-search"></i></button>
-     </div>
-   </div>
+        <!-- Sunday -->
+        <div class="input-field row">
+          <h6>Sunday</h6>
+          <div class="links" id="links-Sun"></div>
+          <textarea
+            placeholder="Add notes here..."
+            id="day-Sun"
+            class="materialize-textarea"
+          ></textarea>
+        </div>
 
-   <!-- main row -->
-   <div class="row">
-     <!-- column for search results -->
-     <div class="col s12 m9">
-       <div class="row">
-         <div class="col s12 m6">
-           <!-- empty div for recipes -->
-           <div id="recipesResults"></div>
-         </div>
-         <!-- empty div for drink -->
-         <div class="col s12 m6" id="drinkResult"></div>
-       </div>
-     </div>
+        <!-- Monday -->
+        <div class="input-field row">
+          <h6>Monday</h6>
+          <div class="links" id="links-M"></div>
+          <textarea
+            placeholder="Add notes here..."
+            id="day-M"
+            class="materialize-textarea"
+          ></textarea>
+        </div>
 
-   </div>
- </div>
+        <!-- Tuesday -->
+        <div class="input-field row">
+          <h6>Tuesday</h6>
+          <div class="links" id="links-T"></div>
+          <textarea
+            placeholder="Add notes here..."
+            id="day-T"
+            class="materialize-textarea"
+          ></textarea>
+        </div>
 
- <!-- main modal -->
- <div id="modal1" class="modal modal-fixed-footer black lighten-4">
+        <!-- Wednesday -->
+        <div class="input-field row">
+          <h6>Wednesday</h6>
+          <div class="links" id="links-W"></div>
+          <textarea
+            placeholder="Add notes here..."
+            id="day-W"
+            class="materialize-textarea"
+          ></textarea>
+        </div>
 
-   <div class="modal-content">
-     <!-- top row  -->
-     <div class="row center">
-       <h4>Meal Planner</h4>
-     </div>
+        <!-- Thursday -->
+        <div class="input-field row">
+          <h6>Thursday</h6>
+          <div class="links" id="links-Th"></div>
+          <textarea
+            placeholder="Add notes here..."
+            id="day-Th"
+            class="materialize-textarea"
+          ></textarea>
+        </div>
 
-     <!-- Sunday -->
-     <div class="input-field row">
-       <h6>Sunday</h6>
-       <div class="links" id="links-Sun"></div>
-       <textarea placeholder="Add notes here..." id="day-Sun" class="materialize-textarea"></textarea>
-     </div>
+        <!-- Friday -->
+        <div class="input-field row">
+          <h6>Friday</h6>
+          <div class="links" id="links-F"></div>
+          <textarea
+            placeholder="Add notes here..."
+            id="day-F"
+            class="materialize-textarea"
+          ></textarea>
+        </div>
 
-     <!-- Monday -->
-     <div class="input-field row">
-       <h6>Monday</h6>
-       <div class="links" id="links-M"></div>
-       <textarea placeholder="Add notes here..." id="day-M" class="materialize-textarea"></textarea>
-     </div>
+        <!-- Saturday -->
+        <div class="input-field row">
+          <h6>Saturday</h6>
+          <div class="links" id="links-S"></div>
+          <textarea
+            placeholder="Add notes here..."
+            id="day-S"
+            class="materialize-textarea"
+          ></textarea>
+        </div>
+      </div>
 
-     <!-- Tuesday -->
-     <div class="input-field row">
-       <h6>Tuesday</h6>
-       <div class="links" id="links-T"></div>
-       <textarea placeholder="Add notes here..." id="day-T" class="materialize-textarea"></textarea>
-     </div>
+      <!-- modal footer -->
+      <div class="modal-footer">
+        <!-- save & close button and clear button-->
+        <button
+          class="modal-close waves-effect waves-green btn"
+          id="close-button"
+        >
+          Save and Close
+        </button>
+        <button class="waves-effect waves-green btn" id="clear-button">
+          Clear
+        </button>
+      </div>
+    </div>
 
-     <!-- Wednesday -->
-     <div class="input-field row">
-       <h6>Wednesday</h6>
-       <div class="links" id="links-W"></div>
-       <textarea placeholder="Add notes here..." id="day-W" class="materialize-textarea"></textarea>
-     </div>
-
-     <!-- Thursday -->
-     <div class="input-field row">
-       <h6>Thursday</h6>
-       <div class="links" id="links-Th"></div>
-       <textarea placeholder="Add notes here..." id="day-Th" class="materialize-textarea"></textarea>
-     </div>
-
-     <!-- Friday -->
-     <div class="input-field row">
-       <h6>Friday</h6>
-       <div class="links" id="links-F"></div>
-       <textarea placeholder="Add notes here..." id="day-F" class="materialize-textarea"></textarea>
-     </div>
-
-     <!-- Saturday -->
-     <div class="input-field row">
-       <h6>Saturday</h6>
-       <div class="links" id="links-S"></div>
-       <textarea placeholder="Add notes here..." id="day-S" class="materialize-textarea"></textarea>
-     </div>
-   </div>
-
-   <!-- modal footer -->
-   <div class="modal-footer">
-     <!-- save & close button and clear button-->
-     <button class="modal-close waves-effect waves-green btn" id="close-button">Save and Close</button>
-     <button class="waves-effect waves-green btn" id="clear-button">Clear</button>
-   </div>
- </div>
-
-
- <!-- links -->
- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-<script src="./Assets/JS/recipes.js"></script>
-
-</body>
+    <!-- links -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-2.1.1.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="./Assets/JS/recipes.js"></script>
+  </body>
 </html>

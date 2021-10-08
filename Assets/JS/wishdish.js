@@ -72,9 +72,9 @@ function createWishDish() {
       </div>
       <div class="col s9">
         <span class="black-text flow-text" id="name">${name}</span>
-        <p class="black-text flow-text" id = "address">${address}</p>
+        <p class="black-text flow-text address" id = "address">${address}</p>
         <br>
-        <a href="${site}" target="_blank" id ="yelp">Yelp Page</a>
+        <a href="${site}" target="_blank" id ="yelp"><img class="yelpSm" src="./Assets/Images/yelp_burst.png"></a>
         <a class="waves-effect waves-light btn delete" id = "delete" data-name="${name}">Remove from WishDish</a>
       </div>
       </div>
@@ -114,9 +114,9 @@ function generateResults(data) {
       </div>
       <div class="col s8">
         <span class="black-text flow-text" id="name">${name}</span>
-        <p class="black-text flow-text" id = "address">${address}</p>
+        <p class="black-text flow-text address" id = "address">${address}</p>
         <br>
-        <a href="${site}" target="_blank" id ="yelp">Yelp Page</a>
+        <a href="${site}" target="_blank" id ="yelp"><img class="yelpSm" src="./Assets/Images/yelp_burst.png"></a>
         <a class="waves-effect waves-light btn save" id = "save">Save to WishDish</a>
       </div>
       </div>
