@@ -22,7 +22,7 @@ Foodie is an interactive one-stop shop where user is provided with many options 
 # WishDish Page:
 
 - User has heard about a restaurant that they want to go to at a future date. They search for the restaurant by name and location, and then add it to their WishDish so that they have it handy next time they need to pick a restaurant.
-  \*If the user has gone to the restaurant, or is no longer interested in going there, they can delete the entry from the list.
+  -If the user has gone to the restaurant, or is no longer interested in going there, they can delete the entry from the list.
 
 # Recipes Page:
 
