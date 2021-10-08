@@ -1,10 +1,10 @@
 # GroupProject1
 
-Foodie is an interactive one-stop shop page for food lovers that fulfils their food needs.
+Foodie is an interactive one-stop shop for food lovers that fulfils their meal decision making needs.
 
 # Description
 
-Foodie is an interactive one-stop shop where user is provided with many options to choose from all at one place.
+Foodie is an interactive one-stop shop where user is provided with many options to help them make deciding what to eat a less ardious taks.
 
 # Index Page: (Welcome page)
 
