@@ -57,3 +57,13 @@ nav {
 #dark {
   color: aliceblue;
 }
+#myWishDish {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  color: aliceblue;
+}
+
+.card-panel {
+  border: 5px solid rgb(128, 121, 161);
+  border-radius: 10px;
+}

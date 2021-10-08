@@ -109,12 +109,12 @@ function generateResults(data) {
     var image = restaurant.image_url;
     var card = $(`<div class="card-panel grey lighten-5 z-depth-1" >
     <div class="row valign-wrapper" id = "card">
-      <div class="col s3">
+      <div class="col s4">
         <img src="${image}" alt="image of ${name}" class="circle responsive-img" id= "image">
       </div>
-      <div class="col s9">
+      <div class="col s8">
         <span class="black-text flow-text" id="name">${name}</span>
-        <span class="black-text flow-text" id = "address">${address}</span>
+        <p class="black-text flow-text" id = "address">${address}</p>
         <br>
         <a href="${site}" target="_blank" id ="yelp">Yelp Page</a>
         <a class="waves-effect waves-light btn save" id = "save">Save to WishDish</a>
